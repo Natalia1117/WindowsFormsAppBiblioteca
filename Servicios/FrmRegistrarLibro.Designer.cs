@@ -38,6 +38,7 @@
             this.txtISBN = new System.Windows.Forms.TextBox();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -52,6 +53,7 @@
             // txtTitulo
             // 
             this.txtTitulo.Location = new System.Drawing.Point(297, 78);
+            this.txtTitulo.Multiline = true;
             this.txtTitulo.Name = "txtTitulo";
             this.txtTitulo.Size = new System.Drawing.Size(100, 20);
             this.txtTitulo.TabIndex = 1;
@@ -86,6 +88,7 @@
             // txtAutor
             // 
             this.txtAutor.Location = new System.Drawing.Point(297, 117);
+            this.txtAutor.Multiline = true;
             this.txtAutor.Name = "txtAutor";
             this.txtAutor.Size = new System.Drawing.Size(100, 20);
             this.txtAutor.TabIndex = 6;
@@ -106,27 +109,45 @@
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(297, 278);
+            this.btnGuardar.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardar.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnGuardar.Location = new System.Drawing.Point(300, 261);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(91, 40);
+            this.btnGuardar.Size = new System.Drawing.Size(82, 31);
             this.btnGuardar.TabIndex = 2;
             this.btnGuardar.Text = "GUARDAR";
-            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnCerrar
             // 
-            this.btnCerrar.Location = new System.Drawing.Point(630, 23);
+            this.btnCerrar.BackColor = System.Drawing.Color.MistyRose;
+            this.btnCerrar.Location = new System.Drawing.Point(594, 31);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(75, 23);
             this.btnCerrar.TabIndex = 9;
             this.btnCerrar.Text = "CERRAR";
-            this.btnCerrar.UseVisualStyleBackColor = true;
+            this.btnCerrar.UseVisualStyleBackColor = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Lucida Calligraphy", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(250, 9);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(194, 24);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "Registro de Libros";
             // 
             // FrmRegistrarLibro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Snow;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.txtISBN);
             this.Controls.Add(this.txtAnio);
@@ -156,5 +177,6 @@
         private System.Windows.Forms.TextBox txtISBN;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnCerrar;
+        private System.Windows.Forms.Label label5;
     }
 }

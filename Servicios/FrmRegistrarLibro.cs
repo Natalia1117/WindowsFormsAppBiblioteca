@@ -15,10 +15,37 @@ namespace WindowsFormsAppBiblioteca.Servicios
     public partial class FrmRegistrarLibro : Form
     {
         private BibliotecaServices servicio;
-        public FrmRegistrarLibro()
+        public FrmRegistrarLibro(BibliotecaServices s)
         {
             InitializeComponent();
             servicio = s;
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Libro libro = new Libro
+                {
+                    ISBN = txtISBN.Text.Trim(),
+                    Titulo = txtTitulo.Text.Trim(),
+                    Autor = txtAutor.Text.Trim(),
+                    Anio = int.Parse(txtAnio.Text.Trim())
+                };
+
+                servicio.RegistrarLibro(libro);
+                MessageBox.Show("Libro registrado correctamente.");
+                txtTitulo.Clear(); txtAutor.Clear(); txtAnio.Clear(); txtISBN.Clear();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}");
+            }
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

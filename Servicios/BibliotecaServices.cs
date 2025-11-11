@@ -50,8 +50,18 @@ namespace WindowsFormsAppBiblioteca.Servicios
         public IEnumerable<Libro> ObtenerDevoluciones()
         {
             var lista = new List<Libro>();
+            var temp = new Pila<Libro>();
+
             while (!PilaDevoluciones.EstaVacia())
-                lista.Add(PilaDevoluciones.Desapilar());
+            {
+                var libro = PilaDevoluciones.Desapilar();
+                lista.Add(libro);
+                temp.Apilar(libro); // los guardas temporalmente
+            }
+
+            while (!temp.EstaVacia())
+                PilaDevoluciones.Apilar(temp.Desapilar()); // restauras la pila original
+
             return lista;
         }
     }

@@ -101,6 +101,12 @@
     <EmbeddedResource Include="Servicios\FrmMenuPrincipal.resx">
       <DependentUpon>FrmMenuPrincipal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Servicios\FrmMostrarLibros.resx">
+      <DependentUpon>FrmMostrarLibros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Servicios\FrmPrestamo.resx">
+      <DependentUpon>FrmPrestamo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Servicios\FrmRegistrarLibro.resx">
       <DependentUpon>FrmRegistrarLibro.cs</DependentUpon>
     </EmbeddedResource>

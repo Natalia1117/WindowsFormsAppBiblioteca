@@ -24,6 +24,17 @@ namespace WindowsFormsAppBiblioteca.Estructuras
             }
             Count++;
         }
+        public IEnumerable<T> ObtenerTodos()
+        {
+            var lista = new List<T>();
+            var actual = frente;
+            while (actual != null)
+            {
+                lista.Add(actual.Datos);
+                actual = actual.Siguiente;
+            }
+            return lista;
+        }
 
         public T Desencolar()
         {

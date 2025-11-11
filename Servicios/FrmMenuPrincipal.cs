@@ -44,16 +44,9 @@ namespace WindowsFormsAppBiblioteca
             new FrmDevolucion(servicio).ShowDialog();
         }
 
-        private void btnOrdenarTitulo_Click(object sender, EventArgs e)
-        {
-            servicio.OrdenarPorTitulo();
-            MessageBox.Show("Libros ordenados por título correctamente.");
-        }
-
         private void btnOrdenarAnio_Click(object sender, EventArgs e)
         {
-            servicio.OrdenarPorAnio();
-            MessageBox.Show("Libros ordenados por año correctamente.");
+
         }
 
         private void btnSalir_Click(object sender, EventArgs e)

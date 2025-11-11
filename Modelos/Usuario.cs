@@ -8,12 +8,14 @@ namespace WindowsFormsAppBiblioteca.Modelos
 {
     public class Usuario
     {
+        public string IdUsuario { get; set; }
         public string Nombre { get; set; }
-        public string Documento { get; set; }
+
+        public string TituloLibro { get; set; } // Nuevo campo: el libro solicitado
 
         public override string ToString()
         {
-            return $"{Nombre} - {Documento}";
+            return $"{IdUsuario} - {Nombre} - {TituloLibro}";
         }
     }
 }
